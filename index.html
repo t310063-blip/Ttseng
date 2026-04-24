@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>曾曾宥欣 | 高中三年學習歷程彙整</title>
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #708090;
+            --secondary-color: #B0C4DE;
+            --bg-color: #F8F9FA;
+            --text-color: #2F4F4F;
+            --white: #ffffff;
+            --highlight-color: #5F9EA0;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        * {
+            margin: 0; padding: 0; box-sizing: border-box;
+            font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        nav {
+            background-color: rgba(255, 255, 255, 0.95);
+            height: 70px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 10%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            backdrop-filter: blur(5px);
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            letter-spacing: 2px;
+            text-decoration: none;
+        }
+
+        nav ul { display: flex; list-style: none; }
+        nav ul li { margin-left: 30px; }
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: 0.3s;
+        }
+        nav ul li a:hover { color: var(--primary-color); }
+
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(112, 128, 144, 0.7), rgba(112, 128, 144, 0.7)), 
+                        url('https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&q=80&w=1500') center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--white);
+            padding: 0 20px;
+        }
+
+        .hero h1 { font-size: 3rem; letter-spacing: 8px; margin-bottom: 20px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+
+        .section { padding: 100px 15%; text-align: center; scroll-margin-top: 70px; }
+        .section-title { font-size: 1.8rem; margin-bottom: 60px; color: var(--primary-color); position: relative; }
+        .section-title::after {
+            content: ""; width: 30px; height: 2px; background: var(--secondary-color);
+            position: absolute; bottom: -15px; left: 50%; transform: translateX(-50%);
+        }
+
+        .bio-container {
+            background: var(--white); padding: 50px; border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.05); text-align: left;
+        }
+
+        .grid-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+
+        .card {
+            background: var(--white); padding: 40px 30px; border-radius: 12px;
+            transition: all 0.5s ease; box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+            display: flex; flex-direction: column; justify-content: space-between;
+            text-align: left;
+        }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.08); }
+
+        .btn {
+            display: inline-block; padding: 10px 22px; background-color: var(--secondary-color);
+            color: var(--white); text-decoration: none; border-radius: 25px;
+            font-size: 0.85rem; font-weight: 500; transition: 0.3s; text-align: center;
+        }
+        .btn:hover { background-color: var(--primary-color); }
+        .btn-highlight { background-color: var(--highlight-color); }
+
+        footer { background-color: var(--primary-color); color: var(--white); padding: 50px 0; text-align: center; }
+
+        @media (max-width: 768px) {
+            .section { padding: 80px 5%; }
+            nav ul { display: none; }
+            .hero h1 { font-size: 2.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#home" class="logo">TSENG TSENG YU-HSIN</a>
+        <ul>
+            <li><a href="#home">首頁</a></li>
+            <li><a href="#about">個人簡歷</a></li>
+            <li><a href="#learning">學習成果</a></li>
+            <li><a href="#experience">多元表現</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero" id="home">
+        <div data-aos="fade" data-aos-duration="2000">
+            <h1>曾曾宥欣</h1>
+            <p>私立大華高級中學 | 追求卓越，勇於探索的終身學習者</p>
+            <p style="margin-top: 20px; font-style: italic; opacity: 0.8;">「在自律中成長，於探索中跨域。」</p>
+        </div>
+    </section>
+
+    <section class="section" id="about">
+        <h2 class="section-title" data-aos="fade">個人簡歷</h2>
+        <div class="bio-container" data-aos="fade-up" data-aos-duration="1500">
+            <h3>關於曾曾宥欣</h3>
+            <p>我就讀於私立大華高級中學，秉持「創造、勤誠、強健、輝煌」精神，致力於將知識轉化為實踐力。我擅長邏輯分析與團隊協作，對於解決複雜問題充滿熱忱。</p>
+            <br>
+            <p><b>就讀學校：</b>私立大華高級中學</p>
+            <p><b>核心能力：</b>批判性思考、變因控制、數位協作、溝通協調</p>
+        </div>
+    </section>
+
+    <section class="section" id="learning" style="background-color: #F4F6F8;">
+        <h2 class="section-title" data-aos="fade">課程學習成果</h2>
+        <div class="grid-container">
+            <div class="card" data-aos="fade-up" data-aos-delay="100">
+                <div>
+                    <h3>學科深耕</h3>
+                    <p>收錄國英數社自等主科之學習歷程，展現紮實的理論基礎與整理能力。</p>
+                </div>
+                <a href="#" target="_blank" class="btn">查看完整檔案</a>
+            </div>
+            <div class="card" data-aos="fade-up" data-aos-delay="300">
+                <div>
+                    <h3>自主學習</h3>
+                    <p>針對特定專案進行長期深度探索，包含計畫、進度追蹤與最終報告。</p>
+                </div>
+                <a href="#" target="_blank" class="btn">查看專題報告</a>
+            </div>
+            <div class="card" style="border-left: 3px solid var(--highlight-color);" data-aos="fade-up" data-aos-delay="500">
+                <div>
+                    <h3>實驗實作：彭巴效應探究</h3>
+                    <p>針對「熱水是否比冷水快結冰」進行科學探究。透過控制變因，發現蒸發是影響結冰速度的重要關鍵。</p>
+                </div>
+                <a href="https://s6.aconvert.com/convert/p3r68-cdx67/alcxm-74oy7.html" target="_blank" class="btn btn-highlight">探究與實作學習檔案</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="experience">
+        <h2 class="section-title" data-aos="fade">多元表現</h2>
+        <div class="grid-container">
+            <div class="card" data-aos="fade-up" data-aos-delay="100">
+                <div>
+                    <h3>社團經歷</h3>
+                    <p>擔任社團幹部，負責活動策劃與團隊協調，培養溝通領導力。</p>
+                </div>
+                <a href="#" target="_blank" class="btn">查看活動紀錄</a>
+            </div>
+            <div class="card" data-aos="fade-up" data-aos-delay="300">
+                <div>
+                    <h3>競賽獲獎</h3>
+                    <p>校內外各項學科競賽與技能挑戰，展現抗壓性與競爭力。</p>
+                </div>
+                <a href="#" target="_blank" class="btn">查看獲獎證明</a>
+            </div>
+            <div class="card" data-aos="fade-up" data-aos-delay="500">
+                <div>
+                    <h3>服務學習</h3>
+                    <p>參與志工活動與社會實踐，培養共感能力與社會責任感。</p>
+                </div>
+                <a href="#" target="_blank" class="btn">查看心得紀錄</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <h3>曾曾宥欣的學習歷程入口</h3>
+            <p>聯繫信箱：980719grace@gmail.com</p>
+            <p>&copy; 2026 Tseng Tseng Yu-Hsin. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 50,      // 距離元素 50px 就觸發（變小，讓它更接近原地出現）
+            duration: 1200,  // 持續 1.2 秒（變慢，更滑順）
+            easing: 'ease-out', // 柔和的結束動作
+            once: true,      // 只執行一次
+            delay: 0         // 初始延遲清零
+        });
+    </script>
+</body>
+</html>
